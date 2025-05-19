@@ -2,7 +2,7 @@
 
 echo "enter your id number "
 
-read ID
+read ID  # ID will be visble on terminal while you are typing
 
 echo " enter your pin: "
 
