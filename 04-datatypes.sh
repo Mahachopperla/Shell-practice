@@ -7,3 +7,4 @@ N2=$2 # $1 AND $2 WILL TAKE THEIR VALUES AS ARGS PASSED WHILE EXECUTING SCRIPT
 
 sum=$(($N1+$N2))
 echo " Sum of $N1 and $N2 is :$sum "
+echo " This script is getting executed at $TIMESTAMP"
