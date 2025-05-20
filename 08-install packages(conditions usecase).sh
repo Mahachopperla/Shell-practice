@@ -24,12 +24,12 @@ then
     echo "installing MYSQL......."
     dnf install mysql -y
 
-if [ $? -eq 0 ]
-    then
-        echo " installation successfull"
-    else
-        echo " installation failed " 
-        exit 1
+    if [ $? -eq 0 ]
+        then
+            echo " installation successfull"
+        else
+            echo " installation failed " 
+            exit 1
     fi
 
 else
