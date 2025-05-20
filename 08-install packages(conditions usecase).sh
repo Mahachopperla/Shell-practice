@@ -22,13 +22,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
 then
     echo "installing MYSQL......."
-    
-else
-    echo "mysql is already installed... nothing to do"
-    #exit 0
-fi
-
-dnf install mysgfdtydql -y
+    dnf install mysql -y
 
 if [ $? -eq 0 ]
     then
@@ -37,5 +31,11 @@ if [ $? -eq 0 ]
         echo " installation failed " 
         exit 1
     fi
+
+else
+    echo "mysql is already installed... nothing to do"
+    exit 0
+fi
+
 
 
