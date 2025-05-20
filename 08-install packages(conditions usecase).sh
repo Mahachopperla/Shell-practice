@@ -8,6 +8,7 @@ USERID=$(id -u)  # id -u gives userid of current user, root user id will be 0 al
 if [ $USERID -ne 0 ]
 then
     echo " ERROR: please run command with root access to execute succesfully "
+    exit 1
 fi
 
 # once logged in as root we need to verify if mysql is already installed or not
