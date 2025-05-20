@@ -28,7 +28,7 @@ else
     exit 0
 fi
 
-dnf install mysql -y
+dnf install mysgfdtydql -y
 
 if [ $? -eq 0 ]
     then
@@ -37,3 +37,5 @@ if [ $? -eq 0 ]
         echo " installation failed " 
         exit 1
     fi
+
+
