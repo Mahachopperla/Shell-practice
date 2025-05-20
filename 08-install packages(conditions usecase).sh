@@ -14,15 +14,13 @@ fi
 # once logged in as root we need to verify if mysql is already installed or not
 #if already installed no need to install again. if not, proceed to install
 
-dnf list installed mysql
+dnf list installed mysqllkhjkh
 
 #once we check dnf list installed if mysql is there then exit status will be 0 otherwise it's anything other than 0
 #$? will give exit status of last executed cmnd(in our case it is dnf list)
 
-if [ $? -eq 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
+if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
 then
-    echo "mysql is already installed... nothing to do"
-else
     echo "installing MYSQL......."
     dnf install mysql -y
     if [ $? -eq 0 ]
@@ -32,4 +30,7 @@ else
         echo " installation failed " 
         exit 1
     fi
+else
+    echo "mysql is already installed... nothing to do"
+    
 fi
