@@ -42,12 +42,12 @@ fi
 
 #installing nginx
 
-dnf list installed nginxx
+dnf list installed nginx
 
 if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
 then
     echo "installing NGINX......."
-    dnf install nginxx -y
+    dnf install nginx -y
     VALIDATE $? "nginx"  # we are passing 2 args to function ,here $1 will be $?(exit status) and $2 will be package name
     
 else
