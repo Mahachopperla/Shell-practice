@@ -14,7 +14,7 @@ fi
 # once logged in as root we need to verify if mysql is already installed or not
 #if already installed no need to install again. if not, proceed to install
 
-dnf list installed mysql
+dnf list installed mysql &
 
 #once we check dnf list installed if mysql is there then exit status will be 0 otherwise it's anything other than 0
 #$? will give exit status of last executed cmnd(in our case it is dnf list)
