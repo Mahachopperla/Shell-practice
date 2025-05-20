@@ -7,3 +7,5 @@ echo " highest marks : ${marks[0]}"
 
 echo "all marks: ${marks[@]}"
 
+
+
