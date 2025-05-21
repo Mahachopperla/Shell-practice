@@ -59,7 +59,7 @@ dnf list installed nginx &>> $LOG_FILE
 if [ $? -ne 0 ]  
 then
     echo -e "$Y installing NGINX.......$N" | tee -a $LOG_FILE
-    dnf install nginx -y
+    dnf install nginx -y &>> $LOG_FILE 
     VALIDATE $? "nginx"  
     
 else
