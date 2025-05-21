@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-echo "This script is getting executed at : $(date)" &>> $LOG_FILE 
+
 # in this script we are going to include redirections
 # use case1: if we are directly printing entire output to terminal it would be messy 
 # usecase 2: and also if we want to see the output(execution) status after certain period of time 
@@ -20,6 +20,7 @@ LOG_FILE="$LOG_FOLDER/$FILE_NAME.log"
 
 mkdir -p $LOG_FOLDER
 
+echo "This script is getting executed at : $(date)" &>> $LOG_FILE 
 USERID=$(id -u)  
 
 if [ $USERID -ne 0 ]
