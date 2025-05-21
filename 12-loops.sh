@@ -40,7 +40,7 @@ VALIDATE(){
     fi
 }
 
-for package in $@
+for package in ${PACKAGES[@]}
 do
 
     dnf list installed $package &>> $LOG_FILE 
