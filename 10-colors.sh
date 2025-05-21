@@ -10,7 +10,7 @@ USERID=$(id -u)  # id -u gives userid of current user, root user id will be 0 al
 
 if [ $USERID -ne 0 ]
 then
-    echo "$R ERROR:$N $Y please run command with root access to execute succesfully$N "
+    echo -e "$R ERROR:$N $Y please run command with root access to execute succesfully$N "
     exit 1
 fi
 
@@ -18,9 +18,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
         then
-            echo " $G installation of $2 is successfull $N"
+            echo -e " $G installation of $2 is successfull $N"
         else
-            echo " $R installation of $2 is failed $N" 
+            echo -e " $R installation of $2 is failed $N" 
             exit 1
     fi
 }
@@ -31,12 +31,12 @@ dnf list installed mysql
 
 if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
 then
-    echo "$Y installing MYSQL.......$N"
+    echo -e "$Y installing MYSQL.......$N"
     dnf install mysql -y
     VALIDATE $? "mysql"  # we are passing args to function here $1 will be $?(exit status) and $2 will be package name
 
 else
-    echo "$G mysql is already installed... nothing to do$N"
+    echo -e "$G mysql is already installed... nothing to do$N"
 fi
 
 #installing nginx
@@ -45,10 +45,10 @@ dnf list installed nginx
 
 if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
 then
-    echo "$Y installing NGINX.......$N"
+    echo -e "$Y installing NGINX.......$N"
     dnf install nginx -y
     VALIDATE $? "nginx"  # we are passing 2 args to function ,here $1 will be $?(exit status) and $2 will be package name
     
 else
-    echo "$G Nginx is already installed... nothing to do$N"
+    echo -e "$G Nginx is already installed... nothing to do$N"
 fi
