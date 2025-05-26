@@ -1,15 +1,16 @@
 #!/bin/bash
 
-
+#to improve readability- instead of using entire syntax of color code, we are declaring them as variables
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[0m"
+N="\e[0m" # this will change color back to normal (to end color code)
 
 USERID=$(id -u)  # id -u gives userid of current user, root user id will be 0 always
 
 if [ $USERID -ne 0 ]
 then
+    # -e enables color code
     echo -e "$R ERROR:$N $Y please run command with root access to execute succesfully$N "
     exit 1
 fi

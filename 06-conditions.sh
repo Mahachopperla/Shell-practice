@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Number=$1
+Number=$1   # takes input while running script in terminal
 
 if [ $Number -gt 10 ]
 then

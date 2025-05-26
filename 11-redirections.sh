@@ -18,7 +18,7 @@ FILE_NAME=$(echo $0 | cut -d "." -f1)
 
 LOG_FILE="$LOG_FOLDER/$FILE_NAME.log"
 
-mkdir -p $LOG_FOLDER
+mkdir -p $LOG_FOLDER # -p creates folder if not existing and prevents error if folder already exists
 
 echo "This script is getting executed at : $(date)" &>> $LOG_FILE 
 USERID=$(id -u)  
