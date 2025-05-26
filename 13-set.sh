@@ -32,3 +32,13 @@ echo "how abt you"
 # Whenver a failure occurs in code it searches for ERR 
 # On any error (ERR), it runs:
 # failure <line-number> <command-that-failed>
+#Here $LINENO and $BASH_COMMAND are special variables which returns line number and script where error encountered
+
+
+
+##################************************************************#################################
+
+# For error handling in shell scripting we have 2 ways :
+# 1. using validate function to validate the status of cmnd using exit status and also let's us know flow of our script
+# 2. set -e command will also used for error handling but only drawback here is we need to write extra echo statemnets
+# to know flow of script
