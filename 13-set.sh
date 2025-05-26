@@ -20,15 +20,15 @@
 
 set -e 
 failure(){
-    echo "error occured at : "
+    echo "error occured at -$1: $2 "
 }
 
-trap " failure "$LINENO" "$BASH_COMMENT" ERR "
+trap 'failure "$LINENO" "$BASH_COMMAND"' ERR 
 
 echo "Hi How are you doing"
 echooo "I'm doing good"
 echo "how abt you"
 
-# Whenver a failure occurs in code it searches for ERR and then goes to trap and will be redirected to failure function
-# for further action
-
+# Whenver a failure occurs in code it searches for ERR 
+# On any error (ERR), it runs:
+# failure <line-number> <command-that-failed>
