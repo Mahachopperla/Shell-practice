@@ -20,7 +20,7 @@
 
 set -e 
 failure(){
-    echo "error occured at -$1: $2 "
+    echo "please double check syntax of $1: $2 "
 }
 
 trap 'failure "$LINENO" "$BASH_COMMAND"' ERR 
