@@ -29,7 +29,7 @@ echo "Hi How are you doing"
 echooo "I'm doing good"
 echo "how abt you"
 
-# Whenver a failure occurs in code it searches for ERR 
+# Whenver a failure occurs in code it signals ERR keyword 
 # On any error (ERR), it runs:
 # failure <line-number> <command-that-failed>
 #Here $LINENO and $BASH_COMMAND are special variables which returns line number and script where error encountered
