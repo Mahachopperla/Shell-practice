@@ -11,7 +11,9 @@ then
     exit 1
 fi
 
-ZIP_FILE=$Dest_dir/backup.zip
+timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
+
+ZIP_FILE=$Dest_dir/$timestamp/backup.zip
 
 files=$(find $Source_dir -name "*.log" -mtime +14)
 if [ -z "$files" ]; then
