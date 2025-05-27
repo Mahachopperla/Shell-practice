@@ -10,6 +10,11 @@ then
     echo "Please check the args you passed "SOURCE or DESTINATION" directory you specified is not existing"
     exit 1
 fi
+if [ $# -lt 2 ]
+then
+    echo "Please use format: sh filename.sh <source directory> <destination directory> <days(optional)>"
+    exit 1
+fi
 
 timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 
