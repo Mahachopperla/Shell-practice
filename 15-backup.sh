@@ -23,7 +23,7 @@ else
     do
         zip -j "$ZIP_FILE" -@ < "$files"
 
-    done <<< $files
+    done
 fi
 
 
