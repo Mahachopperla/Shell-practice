@@ -21,7 +21,7 @@ else
 
     while IFS= read -r line
     do
-        zip -j "$ZIP_FILE" "$files"
+        zip -j "$ZIP_FILE" "$line"
 
     done <<< "$files"
 fi
