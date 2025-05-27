@@ -23,7 +23,7 @@ timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 
 ZIP_FILE=${Dest_dir}/${timestamp}_backup.zip
 
-files=$(find $Source_dir -name "*.log" -mtime +14)
+files=$(find $Source_dir -name "*.log" -mtime +$Days)
 if [ -z "$files" ]; then
     echo "there are no files which are older than $Days days"
 else
