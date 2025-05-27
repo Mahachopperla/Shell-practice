@@ -13,8 +13,8 @@ fi
 
 timestamp=$(date +"%Y-%m-%d-%H-%M-%S")
 
-mkdir -p $Dest_dir/$timestamp
-ZIP_FILE=$Dest_dir/$timestamp/backup.zip
+
+ZIP_FILE=${Dest_dir}/${timestamp}_backup.zip
 
 files=$(find $Source_dir -name "*.log" -mtime +14)
 if [ -z "$files" ]; then
