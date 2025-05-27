@@ -7,7 +7,7 @@ Days="${3:-14}"
 
 if [ $# -lt 2 ]
 then
-    echo "Please use format: sh filename.sh <source directory> <destination directory> <days(optional)>"
+    echo "Please use format: <command> <source directory> <destination directory> <days(optional)>"
     exit 1
 fi
 
