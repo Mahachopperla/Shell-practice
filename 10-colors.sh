@@ -26,15 +26,13 @@ VALIDATE(){
     fi
 }
 
-#so whenver we install any package , to validate no need to write code again we can simply call validate function
-
 dnf list installed mysql
 
-if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
+if [ $? -ne 0 ]  
 then
     echo -e "$Y installing MYSQL.......$N"
     dnf install mysql -y
-    VALIDATE $? "mysql"  # we are passing args to function here $1 will be $?(exit status) and $2 will be package name
+    VALIDATE $? "mysql"  
 
 else
     echo -e "$G mysql is already installed... nothing to do$N"
@@ -44,11 +42,11 @@ fi
 
 dnf list installed nginx
 
-if [ $? -ne 0 ]  # $? returns 0 if mysql is already there otherwise it is someother num er not 0
+if [ $? -ne 0 ]  
 then
     echo -e "$Y installing NGINX.......$N"
     dnf install nginx -y
-    VALIDATE $? "nginx"  # we are passing 2 args to function ,here $1 will be $?(exit status) and $2 will be package name
+    VALIDATE $? "nginx"  
     
 else
     echo -e "$G Nginx is already installed... nothing to do$N"

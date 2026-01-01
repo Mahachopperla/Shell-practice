@@ -1,7 +1,7 @@
 #!/bin/bash 
-#shibang first line of every shell script
 
-PERSON1=Sita    #no gap before and after =
+
+PERSON1=Sita
 PERSON2=Ram 
 
 echo " $PERSON1: hii... $PERSON2, how are you "
